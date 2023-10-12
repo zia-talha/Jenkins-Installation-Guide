@@ -1,16 +1,22 @@
 sudo docker pull jenkins/jenkins
 
 
+
 # Start the Jenkins container. You can do this using the following command.
 # This command will start a Jenkins container on port 8080 and mount a volume named jenkins_home to the /var/jenkins_home directory inside the container. The jenkins_home directory is where Jenkins stores all of its configuration and data.
+
 docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins
 
 
+
 # Access Jenkins. Once the Jenkins container is up and running, you can access it in your web browser at.
+
 http://localhost:8080
 
 
+
 # If you run Jenkins inside Docker as a detached container, you can use this to view the Jenkins logs.Also jenkins secret password.
+
 docker logs <containerId>
 
 
